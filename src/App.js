@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar'
 import MainContent from './components/MainContent'
+import Featured from './components/Featured'
+import Search from './components/Search'
 
 function App() {
   const [animeList, SetAnimeList] = useState([]);
@@ -32,15 +34,30 @@ function App() {
     GetTopAnime()
   }, [])
 
-  return (
+  if (search == "") {
+    return (
     <div className="App">
       <Header/>
       <div className="content-wrap">
         <Sidebar topAnime={topAnime}/>
-        <MainContent HandleSearch={HandleSearch} search={search} SetSearch={SetSearch} animeList={animeList}/>
+        <Search HandleSearch={HandleSearch} search={search} SetSearch={SetSearch} animeList={animeList} id="search"></Search>
+        <Featured topAnime={topAnime}/>
       </div>
     </div>
-  );
+    );
+  }
+  else {
+    return (
+      <div className="App">
+        <Header/>
+        <div className="content-wrap">
+          <Sidebar topAnime={topAnime}/>
+          <Search HandleSearch={HandleSearch} search={search} SetSearch={SetSearch} animeList={animeList}></Search>
+          <MainContent HandleSearch={HandleSearch} search={search} SetSearch={SetSearch} animeList={animeList}/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -23,6 +23,19 @@ header h1 strong {
   color: #313131;
 }
 
+header h3 {
+  margin-top: 10px;
+  color: #AAA;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+header h3 a {
+  color: #928181;
+  text-decoration: none;
+}
+
 .content-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,5 +195,94 @@ header h1 strong {
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.featured {
+  height: 40vh;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
+  max-width: 450px;
+  overflow: hidden;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 2px 14px rgba(255, 255, 255, 0.2);
+          box-shadow: 3px 2px 14px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  font-size: 1rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  -webkit-box-shadow: 2px 3px 18px rgba(255, 255, 255, 0.4);
+          box-shadow: 2px 3px 18px rgba(255, 255, 255, 0.4);
+}
+
+.card__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.card__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card__snippet {
+  margin-bottom: 0.5rem;
+}
+
+.card__readmore {
+  margin-top: auto;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#search {
+  margin-bottom: 100px;
 }
 /*# sourceMappingURL=main.css.map */
