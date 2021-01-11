@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       <Header/>
       <div className="content-wrap">
-        <Sidebar topAnime={topAnime}/>
+        
         <Search HandleSearch={HandleSearch} search={search} SetSearch={SetSearch} animeList={animeList} id="search"></Search>
         <Featured topAnime={topAnime}/>
       </div>

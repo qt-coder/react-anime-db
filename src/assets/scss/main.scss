@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Roboto', 'Fira Sans',sans-serif;
 }
 
 header {
@@ -230,4 +230,68 @@ header {
 
 #search {
 	margin-bottom: 100px;
+}
+
+#main-featured {
+	padding: 16px;
+}
+
+#main-featured > img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	margin-bottom: 10px;
+}
+
+.button {
+	display: inline-block;
+	text-align: center;
+	padding: 10px 15px;
+	color: #fff;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.has-spacer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.spacer {
+		flex: 1 1 0%;
+	}
+}
+
+.align-self-end {
+	align-self: flex-end;
+}
+
+.flex-grid {
+	display: block;
+	//padding-top: 150px;
+
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin: 0 -8px;
+	}
+
+	.col {
+		margin-bottom: 16px;
+		padding: 16px;
+		border-radius: 16px;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			flex: 1 1 100%;
+			margin: 0px 8px 16px;
+			max-width: calc(50% - 16px);
+		}
+	}
+}
+
+.anime-title {
+	text-decoration: none;
 }
